@@ -11,7 +11,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     RadioButton stem_opt3,
-    CheckBox stemCareer_1, stemCareer_2, stemCareer_3, stemCareer_4,
+    CheckBox stemCareer_1, stemCareer_2, stemCareer_3, stemCareer_4, stem_fact1, stem_fact2,
+    CheckBox stem_fact3, stem_fact4,
 
     show();
 
