@@ -1,5 +1,6 @@
 package com.example.android.quizapp;
 
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     CheckBox stem_career_1, stem_career_2, stem_career_3, stem_career_4;
     CheckBox stem_fact_1, stem_fact_2, stem_fact_3, stem_fact_4;
 
-    int correctanswer=0;
+    int correctAnswers = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +29,28 @@ public class MainActivity extends AppCompatActivity {
 
     /** Called when the user touches the button */
     public void correctAnswerOne(View view) {
+        correctAnswers = +1;
         Toast.makeText(this, "Getting somewhere!", Toast.LENGTH_SHORT).show();
         // Do something in response to button click
     }
 
-    //Create a Method that adds each correct selection to integer//
-    //Data Type= Boolean
-    //
+    public void correctAnswerTwo(View view) {
+        correctAnswers = +1;
+        Toast.makeText(this, "Now we're talking", Toast.LENGTH_SHORT).show();
+        // Do something in response to button click
+    }
+
+    public void stem_funding_q_4(View view) {
+        correctAnswers = +1;
+        Toast.makeText(this, "Getting somewhere!", Toast.LENGTH_SHORT).show();
+        // Do something in response to button click
+    }
+
+    public void submission(View view) {
+        Toast.makeText(this, "You got " + correctAnswers + "out of 4 correct! Perfect Score!", Toast.LENGTH_SHORT).show();
+
+    }
+
 }
 
 
