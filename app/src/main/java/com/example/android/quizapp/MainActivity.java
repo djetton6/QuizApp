@@ -55,30 +55,30 @@ public class MainActivity extends AppCompatActivity {
     public void stemCareer(View view) {
         // Is the view now checked?
         //int checkboxcareers = 0;
-        boolean checked = ((CheckBox) view).isChecked();
+        //This took forever to get to work thanks Project Coach.
 
-        switch (view.getId()) {
-            //Check to see if stem_career_1 is checked. All must be checked to get 1 point.
-            case R.id.stem_career_1:
-                if (checked)
-                    correctAnswers += 1;
-                else
-                    correctAnswers -= 1;
+        CheckBox checkBoxOne = findViewById(R.id.stem_career_1);
+        boolean stemCareer1 = checkBoxOne.isChecked();
 
-                break;
+        CheckBox checkBoxTwo = findViewById(R.id.stem_career_2);
+        boolean stemCareer2 = checkBoxTwo.isChecked();
+
+        CheckBox checkBoxThree = findViewById(R.id.stem_career_3);
+        boolean stemCareer3 = checkBoxThree.isChecked();
+
+        CheckBox checkBoxFour = findViewById(R.id.stem_career_4);
+        boolean stemCareer4 = checkBoxFour.isChecked();
+
+        if ( stemCareer1 & stemCareer2 & stemCareer3 & stemCareer4) {
+            correctAnswers += 1;
+            Toast.makeText(this, "Testing" + correctAnswers, Toast.LENGTH_SHORT).show();
+            return;
+
         }
+    }
+}
 
-
-        switch (view.getId()) {
-            case R.id.stem_career_2:
-                if (checked)
-                    correctAnswers += 1;
-                else
-                    correctAnswers += 0;
-                break;
-        }
-
-        switch (view.getId()) {
+/*        switch (view.getId()) {
             case R.id.stem_career_3:
                 if (checked)
                     correctAnswers += 1;
@@ -95,7 +95,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
-
+*/
+/*
     public void stemFact(View view) {
         // Is the view now checked?
         //int checkboxcareers = 0;
@@ -140,16 +141,12 @@ public class MainActivity extends AppCompatActivity {
         //Submission Button should show score and email name.
     }
 
+*/
+  /*  final Button button = findViewById(R.id.submission);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                EditText emailMessage = (EditText) findViewById(R.id.email_input);
+                String email = emailMessage.getText().toString();
+                Toast.makeText(MainActivity.this, "Test" + email + correctAnswers, Toast.LENGTH_SHORT).show();
 
-    public void submission(View view) {
-        EditText
-    }
-        Toast.makeText(this, "You got" + correctAnswers + "out of 4 correct! " , Toast.LENGTH_SHORT).show();
-
-    }
-
-    public void submitOrder(View view) {
-
-        EditText emailMessage = (EditText) findViewById(R.id.input_email);
-        String name = emailMessage.getText().toString();
-}
+    */
