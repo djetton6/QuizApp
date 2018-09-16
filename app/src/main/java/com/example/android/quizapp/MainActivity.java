@@ -69,79 +69,40 @@ public class MainActivity extends AppCompatActivity {
         CheckBox checkBoxFour = findViewById(R.id.stem_career_4);
         boolean stemCareer4 = checkBoxFour.isChecked();
 
-        if ( stemCareer1 & stemCareer2 & stemCareer3 & stemCareer4) {
+        if (stemCareer1 & stemCareer2 & stemCareer3 & stemCareer4) {
             correctAnswers += 1;
             Toast.makeText(this, "Testing" + correctAnswers, Toast.LENGTH_SHORT).show();
             return;
 
         }
     }
-}
 
-/*        switch (view.getId()) {
-            case R.id.stem_career_3:
-                if (checked)
-                    correctAnswers += 1;
-                else
-                    correctAnswers += 0;
-                break;
+        public void stemFact(View view){
+            // Is the view now checked?
+            //int checkboxcareers = 0;
+            //This took forever to get to work thanks Project Coach.
+
+            CheckBox checkBoxFactOne = findViewById(R.id.stem_fact_1);
+            boolean stemFact1 = checkBoxFactOne.isChecked();
+
+            CheckBox checkBoxFactTwo = findViewById(R.id.stem_fact_2);
+            boolean stemFact2 = checkBoxFactTwo.isChecked();
+
+            CheckBox checkBoxFactThree = findViewById(R.id.stem_fact_3);
+            boolean stemFact3 = checkBoxFactThree.isChecked();
+
+            CheckBox checkBoxFactFour = findViewById(R.id.stem_fact_4);
+            boolean stemFact4 = checkBoxFactFour.isChecked();
+
+            if (stemFact1 & stemFact2 & stemFact3 & stemFact4) {
+                correctAnswers += 1;
+                Toast.makeText(this, "Testing" + correctAnswers, Toast.LENGTH_SHORT).show();
+                return;
+            }
         }
-        switch (view.getId()) {
-            case R.id.stem_career_4:
-                if (checked)
-                    correctAnswers += 1;
-                else
-                    correctAnswers += 0;
-                break;
-        }
-    }
-*/
-/*
-    public void stemFact(View view) {
-        // Is the view now checked?
-        //int checkboxcareers = 0;
-        boolean checked = ((CheckBox) view).isChecked();
+    };
+            //Submission Button should show score and email name.
 
-        switch (view.getId()) {
-            case R.id.stem_fact_1:
-                if (checked)
-                    correctAnswers += 1;
-                else
-                    correctAnswers += 0;
-                break;
-        }
-
-        switch (view.getId()) {
-            case R.id.stem_fact_2:
-                if (checked)
-                    correctAnswers += 1;
-                else
-                    correctAnswers += 0;
-                break;
-        }
-
-        switch (view.getId()) {
-            case R.id.stem_fact_3:
-                if (checked)
-                    correctAnswers += 1;
-                else
-                    correctAnswers += 0;
-                break;
-        }
-
-        switch (view.getId()) {
-            case R.id.stem_fact_4:
-                if (checked)
-                    correctAnswers += 1;
-                else
-                    correctAnswers += 0;
-                break;
-        }
-
-        //Submission Button should show score and email name.
-    }
-
-*/
   /*  final Button button = findViewById(R.id.submission);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
